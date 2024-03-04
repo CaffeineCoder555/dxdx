@@ -1,0 +1,727 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #101022;
+    background-image: url(./img/back.png);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+#loadingpage{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #e3dfdc; */
+    background-image: url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BhY2V8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 200;
+    font-size: 67px;
+    position: fixed;
+    font-family: dm;
+    animation: lpage 1s linear 5s both;
+  }
+  
+  @keyframes lpage {
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  #loadingpage h1{
+    margin: 0%;
+    padding: 0%;
+    font-weight: 500;
+    position: absolute;
+    bottom: -10%;
+    font-family: gilroy;
+    color: white;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation-name: percent;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+  }
+  
+  
+  @keyframes percent {
+    0%{
+      bottom: -10%;
+    }
+    10%{
+      bottom: 16%;
+    }
+    20%{
+      bottom: 20%;
+    }
+    40%{
+      bottom: 40%;
+    }
+    60%{
+      bottom: 60%;
+    }
+    80%{
+     bottom: 70%; 
+    }
+    100%{
+      bottom: 90%;
+      visibility: hidden;
+    }
+  }
+  
+  .loadingper::after{
+    content: "";
+    animation: loadper 5s;
+  }
+  
+  @keyframes loadper {
+    0%{
+      content: "0%";
+    }
+    10%{
+      content: "16%";
+    }
+    20%{
+      content: "20%";
+    }
+    40%{
+      content: "40%";
+    }
+    60%{
+      content: "60%";
+    }
+    80%{
+      content: "80%";
+    }
+    100%{
+      content: "100%";
+    }
+  }
+
+#main{
+    height: 100vh;
+    width: 100vw;
+}
+
+#hero{
+    height: 110vh;
+    width: 100vw;
+    position: relative;   
+    padding-top: 100px;
+}
+
+#nav1{
+    height: 40px;
+    width: 100vw;
+    background-color: #715BF4;
+    text-align: center;
+    margin: 0;
+}
+
+#nav1 h1{
+    color: aliceblue;
+    font-size: 16px;
+    font-family: gilroy;
+    text-transform: capitalize;
+    padding-top: 8px;
+    font-weight: 600;
+}
+
+#nav2{
+    padding: 25px 30px;
+    height: 100px;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+}
+
+.three-buttons{
+    padding: 5px 5px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.537);
+    text-align: center;
+}
+
+.btn{
+    background-color: transparent;
+    color: rgb(36, 35, 35);
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-family: gilroy;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    transition:all ease 0.5s;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    background-color: #715BF4;
+    color: white;
+}
+
+.logo img{
+    height: 40px;
+}
+
+.icons-button{    
+    padding: 5px 5px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.537);
+    text-align: center;
+}
+
+.icon-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    padding: 10px 12px;
+    font-family: gilroy;
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(36, 35, 35);
+    transition:all ease 0.5s;
+}
+
+.icon-btn:hover{
+    background-color: #715BF4;
+    color: white;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    position: relative;
+}
+
+.container #object{
+    position: absolute;
+}
+
+.object1{
+    height: 180px;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.object2{
+    height: 140px;
+    position: absolute;
+    top: 75%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.object3{
+    height: 80px;
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    transform: translate(0%, 0%);
+}
+
+.object4{
+    height: 100px;
+    position: absolute;
+    top: 10%;
+    left: 75%;
+    transform: translate(0%, 0%);
+}
+
+.object5{
+    height: 450px;
+    position: absolute;
+    top: 30%;
+    right: 0%;
+    transform: translate(0%, 0%);
+}
+
+.object6{
+    height: 70px;
+    position: absolute;
+    top: 85%;
+    left: 75%;
+    transform: translate(0%, 0%);
+}
+
+.object7{
+    height: 200px;
+    position: absolute;
+    top: 70%;
+    left: 24%;
+    transform: translate(-50%, 0%);
+}
+
+.object8{
+    height: 500px;
+    position: absolute;
+    top: 8%;
+    left: -6%;
+    transform: translate(0%, 0%);
+}
+
+.hero-center-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+}
+
+.hero-center-text h1{
+    width: 100%;
+    font-size: 100px;
+    color: white;
+    font-weight: 900;
+    line-height: 100px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: gilroy;
+}
+
+.hero-center-text button{
+    background-color: #715bf4;
+    color: white;
+    border-radius: 50px;
+    margin-top: 70px;
+    padding: 15px 50px;
+    font-family: gilroy;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+#page2{
+    height: 130vh;
+    width: 100vw;
+    position: relative;
+}
+
+.FeaturedDrop{
+    height: 1000px;
+    width: 1100px;
+    background-color: #232334;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding-top: 20px;
+}
+
+.page2-heading h1{
+    width: 100%;
+    font-size: 50px;
+    color: white;
+    font-weight: 900;
+    line-height: 100px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: gilroy;
+    line-height: 10px;
+}
+
+.page2-heading h1 span{
+    width: 100%;
+    font-size: 30px;
+    color: rgb(169, 164, 164);
+    font-weight: 900;
+    line-height: 100px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: gilroy;
+}
+
+
+.page2-product{
+    height: 70vh;
+    width: 84vw;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50% ,-50%);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product2{
+    height: 60vh;
+    width: 450px;
+    border-radius: 50px;
+    background-color: #404052;
+}
+
+.product2 .pro2 img:hover{
+    opacity: 0;
+}
+
+.pro2{
+    height: 420px;
+    width: 100%;
+    border-radius: 50px;
+    background-image: url(./img/Hedgies_back_750x.webp);
+    background-position: center;
+    background-size: cover;
+    background-color: #404052;
+}
+
+#pro22{
+    background-image: url(./img/b-cap.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+#pro23{
+    background-image: url(./img/t-girl.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.pro2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+    background-color: #404052;
+    transition: all ease 1s;
+
+}
+
+.pro-info{
+    height: calc(60vh - 420px);
+    width: 100%;
+    border-radius: 0px 0px 50px 50px;
+    padding: 15px 30px ;
+    background-color: #404052;
+    border: none;
+}
+
+
+
+.pro-info h1{
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    line-height: 100px;
+    text-align: left;
+    text-transform: capitalize;
+    font-family: gilroy;
+    line-height: 30px;
+} 
+
+.pro-info h1 span{
+    width: 100%;
+    font-size: 15px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 100px;
+    text-align: left;
+    text-transform: capitalize;
+    font-family: gilroy;
+    line-height: 30px;
+} 
+
+.page2-product .product2:nth-child(2){
+    margin-top: -100px;
+}
+
+.FeaturedDrop button{
+    background-color: #715bf4;
+    color: white;
+    border-radius: 50px;
+    margin-top: 100px;
+    margin-left: 440px;
+    padding: 15px 50px;
+    font-family: gilroy;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+
+.h-c-t-btn:hover{
+    background-color: #3d1fea;
+}
+
+/* ================page3========================= */
+
+#page3{
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+}
+
+
+.HedgiesNFTs{
+    height: 550px;
+    width: 1100px;
+    background-image: linear-gradient(45deg, #6D7DF1, #414F8C);
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+
+}
+
+.p3-text{
+    height: 100%;
+    width: 50%;
+    border-radius: 50px 0px 0px 50px;
+    position: relative;
+}
+
+.p3-text h1{
+    height: 50%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-family: gilroy;
+    font-weight: 900;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.p3-text p{
+    margin-top: 20px;
+    font-family: gilroy;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+.HedgiesNFTs h1 button{
+    background-color: #e1e1e1;
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-left: 0px;
+    padding: 15px 50px;
+    font-family: gilroy;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+.p3-img{
+    height: 100%;
+    width: 50%;
+    border-radius: 50px 0px 0px 50px;
+    position: relative;
+}
+
+.p3-img img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+
+/* ======================page4-============================ */
+
+#page4{
+    height: 130vh;
+    width: 100vw;
+    position: relative;
+}
+
+.FollowTheseSteps{
+    height: 1050px;
+    width: 1100px;
+    background-color: #232334;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding-top: 20px;
+}
+
+
+
+
+.page4-heading h1{
+    width: 100%;
+    font-size: 50px;
+    color: white;
+    font-weight: 900;
+    line-height: 100px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: gilroy;
+    line-height: 10px;
+}
+
+.page4-heading h1 span{
+    width: 100%;
+    font-size: 30px;
+    color: rgb(169, 164, 164);
+    font-weight: 900;
+    line-height: 100px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: gilroy;
+}
+
+
+.page4-product{
+    height: 70vh;
+    width: 84vw;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50% ,-50%);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product4{
+    height: 60vh;
+    width: 450px;
+    border-radius: 50px;
+    background-color: #404052;
+}
+
+
+.pro4{
+    height: 420px;
+    width: 100%;
+    border-radius: 50px;
+    background-position: center;
+    background-size: cover;
+    background-color: #404052;
+    position: relative;
+}
+
+
+.pro4 img{
+    height: 60%;
+    width: 60%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+    background-color: #404052;
+    transition: all ease 1s;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.pro4 img:hover{
+    scale:1.05;
+}
+
+.pro4-info{
+    height: calc(60vh - 420px);
+    width: 100%;
+    border-radius: 0px 0px 50px 50px;
+    padding: 15px 30px ;
+    background-color: #404052;
+    border: none;
+}
+
+.pro4-info h1{
+    width: 100%;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    line-height: 100px;
+    text-align: center;
+    text-transform:inherit;
+    font-family: gilroy;
+    line-height: 30px;
+} 
+
+.page4-product .product4:nth-child(2){
+    margin-top: 100px;
+}
+
+.stiker{
+    height: 70px;
+    width: 300px;
+    border-radius: 12px;
+    background-color:  #6D7DF1;
+    margin-top: -10px ;
+    margin-left: -40px;
+    rotate: -10deg;
+    position: relative;
+    z-index: 20;
+}
+
+.stiker h1:hover{
+    scale:1.09;
+}
+
+.stiker h1{
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    line-height: 100px;
+    text-align: left;
+    text-transform:inherit;
+    font-family: gilroy;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 20px;
+    transition: all ease 0.5s;
+}
+
+
+.FollowTheseSteps button{
+    background-color: #715bf4;
+    color: white;
+    border-radius: 50px;
+    margin-top: 170px;
+    margin-left: 440px;
+    padding: 15px 50px;
+    font-family: gilroy;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+
+
+
+
